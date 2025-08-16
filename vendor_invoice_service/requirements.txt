@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+huggingface-hub
+transformers
+python-multipart
+pydantic
+requests
+sqlalchemy
+psycopg2-binary
+python-dotenv
+llama-cpp-python
+pytesseract
+pillow
