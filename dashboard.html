@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PaySplit+ Dashboard</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">PaySplit+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Recipients</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== DASHBOARD HEADER ===================== -->
+  <section class="py-4 bg-light text-center">
+    <div class="container">
+      <h2>Dashboard</h2>
+      <p class="lead">Track payments and recipient distribution in real-time.</p>
+    </div>
+  </section>
+
+  <!-- ===================== STATS CARDS ===================== -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Total Transactions</h5>
+              <p class="card-text" id="totalTransactions">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Total Recipients</h5>
+              <p class="card-text" id="totalRecipients">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Total Amount Split</h5>
+              <p class="card-text" id="totalAmount">R0.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRANSACTIONS TABLE ===================== -->
+  <section class="py-4">
+    <div class="container">
+      <h3 class="mb-3">Recent Transactions</h3>
+      <div class="table-responsive">
+        <table class="table table-striped table-hover" id="transactionsTable">
+          <thead class="table-primary">
+            <tr>
+              <th>#</th>
+              <th>Amount (R)</th>
+              <th>Recipients (%)</th>
+              <th>Split Details</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Transactions will be injected here by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-primary text-white text-center py-3">
+    <p>© 2025 PaySplit+. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="dashboard.js"></script>
+</body>
+</html>
